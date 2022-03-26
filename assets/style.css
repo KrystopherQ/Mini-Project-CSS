@@ -1,99 +1,137 @@
-::root {
-    --border-radius: (10px)
-}
-
-body {
-    background-color: rgb(79, 134, 236);
-    color: azure;
-}
-
-main {
-    width: 95%;
-    text-align: center;
-}
-
-pre {
-    background-image: linear-gradient(purple white);
-}
-
-.grid-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    justify-content: center;
-}
-
-.column {}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100%;
-    padding: 2rem;
-    outline: 1px dashed purple;
-    outline-offset: -1px;
-    transition: all 0.5s ease-in-out;
-}
-
-.box .box {
-    position: relative;
-    margin: -4rem 0 1 1.5 0;
-    padding: 0.5 1rem;
-    background-color: white;
-    border-radius: var(--border-radius);
-    transition: all 0.5s ease-in-out;
-}
-
-.box:hover,
-.box:hover .box {
-    box-shadow: inset 0px 0px 8px;
-}
-
-.box pre {
-    white-space: pre-wrap;
-    overflow: auto;
-    tab-size: 4;
-    padding: 1.2rem 1rem;
-    border-radius: 8px;
-    background-image: linear-gradient(red yellow);
-}
-
-.box pre:active {
-    user-select: all;
-}
-
-.box .code-block {
-    flex-grow: 1;
-}
-
-.code-block {
-    position: relative;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgb(245, 102, 209);
-    border-radius: var(--border-radius);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.grid {}
-
-.overlay {}
-
-.gradient {}
-
-.glow {}
-
-.glow::hover,
-.glow::hover .glow {}
+                     ::root {
+                        --border-radius: (10px);
+                    }
+                    
+                    body {
+                        background-color: black;
+                        color: white;
+                    }
+                    
+                    header {
+                        width: 95%;
+                        margin: 0 auto;
+                        padding: 40px;
+                        text-align: center;
+                    }
+                    
+                    section {
+                        padding: 10px;
+                        border: 1px - purple;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        transition: margin 1s;
+                    }
+                    
+                    #header-text {
+                        padding: 5px;
+                    }
+                    
+                    main {
+                        width: 95%;
+                        text-align: center;
+                    }
+                    
+                    pre {
+                        background-image: linear-gradient(black white);
+                    }
+                    
+                    .grid-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        margin-left: -24px;
+                        margin-right: -24px;
+                    }
+                    
+                    .row {
+                        display: inline-block;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        margin-left: -24px;
+                        margin-right: -24px;
+                        padding: 24px;
+                        justify-content: center;
+                    }
+                    
+                    #column {}
+                    
+                    .box {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        min-height: 100%;
+                        padding: 32px;
+                        outline: 2px dashed white;
+                        outline-offset: -1px;
+                        transition: all 0.5s ease-in-out;
+                    }
+                    
+                    .box .box {
+                        position: relative;
+                        margin: -4rem 0 1 1.5 0;
+                        padding: 0.5 16px;
+                        background-color: white;
+                        border-radius: var(--border-radius);
+                        transition: all 0.5s ease-in-out;
+                    }
+                    
+                    .box:hover,
+                    .box:hover .box-header {
+                        box-shadow: inset 0px 0px 8px limegreen, 0 0 15px limegreen;
+                    }
+                    
+                    .box .box-header {
+                        position: relative;
+                        margin: -64px 0 24px 0;
+                        padding: 0 24px 16px;
+                        background-color: rgb(53, 49, 49);
+                        border-radius: var(--border-radius);
+                    }
+                    
+                    .box .code-block {
+                        flex-grow: 1;
+                    }
+                    
+                    .box pre {
+                        white-space: pre-wrap;
+                        overflow: auto;
+                        tab-size: 4;
+                        padding: 20px 16px;
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    
+                    .box pre:active {
+                        user-select: all;
+                    }
+                    
+                    .code-block {
+                        position: relative;
+                        margin: 20px;
+                        padding: 20px;
+                        background-color: rgb(245, 102, 209);
+                        border-radius: var(--border-radius);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+                    
+                    footer {
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                    
+                    .grid {}
+                    
+                    .overlay {}
+                    
+                    .gradient {}
+                    
+                    .glow {}
+                    
+                    .glow::hover,
+                    .glow::hover .glow {}
