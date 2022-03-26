@@ -70,6 +70,10 @@ pre {
     user-select: all;
 }
 
+.box .code-block {
+    flex-grow: 1;
+}
+
 .code-block {
     position: relative;
     margin: 20px;
