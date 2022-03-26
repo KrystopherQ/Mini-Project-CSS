@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(79, 134, 236);
     color: azure;
 }
 
@@ -33,7 +33,41 @@ pre {
 .column {}
 
 .box {
-    display: block dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    outline: 1px dashed purple;
+    outline-offset: -1px;
+    transition: all 0.5s ease-in-out;
+}
+
+.box .box {
+    position: relative;
+    margin: -4rem 0 1 1.5 0;
+    padding: 0.5 1rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover,
+.box:hover .box {
+    box-shadow: inset 0px 0px 8px;
+}
+
+.box pre {
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+    background-image: linear-gradient(red yellow);
+}
+
+.box pre:active {
+    user-select: all;
 }
 
 .code-block {
